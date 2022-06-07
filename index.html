@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Quiz App</title>
+</head>
+<body>
+    <header>QuizApp</header>
+    <main class="quiz-main">
+        <div class="start">
+            <div class="start-display">
+                <h1 id="start-note">JAVASCRIPT QUIZ, TEST YOUR KNOWLEDGE ON THIS COURSE</h1>
+                <img src="./image/images.png" alt="img" id="logo">
+                <button class="start-btn">Start Quiz</button>
+            </div>
+        </div>
+        <div class="container hide">
+            <div class="quiz-app">
+                <div class="head-content">
+                    <span id="ques">Question X of Y</span>
+                    <span id="timer">00:00:00</span>
+                </div>
+                <div class="ques-content">Q.</div>
+                <p id="instruction">Please Choose one of the following Answers</p>
+                <hr>
+                <div class="buttons" id="btns">
+                    <button class="btn" id="btn0">
+                        <p class="txt" data-number="1">A.</p>
+                    </button>
+                    <button class="btn" id="btn1">
+                        <p class="txt" data-number="2">B.</p>
+                    </button>
+                    <button class="btn" id="btn2">
+                        <p class="txt" data-number="3">C.</p>
+                    </button>
+                    <button class="btn" id="btn3">
+                        <p class="txt" data-number="4">D.</p>
+                    </button>
+                </div>
+                <hr>
+                <div class="next-prev">
+                    <button class="prev">Prev &nbsp; &lt; </button>
+                    <button class="next">Next &nbsp; &gt;</button>
+                </div>
+            </div>
+
+        </div>
+    </main>
+    <script type="module" src="quiz.js"></script>
+</body>
+</html>
