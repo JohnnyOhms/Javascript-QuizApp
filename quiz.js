@@ -3,19 +3,21 @@ const startBtn = document.querySelector(".start-btn"),
     intro = document.querySelector(".start"),
     quizApp = document.querySelector(".container"),
     questionElement = document.querySelector(".ques-content"),
-    nextBtn = document.querySelector(".next"),
     btn_containers = document.querySelector(".buttons");
     let options = Array.from(document.getElementsByClassName('txt'));
+    let nextBtn = document.querySelector(".next");
     let questionIndex, progress = 0, score = 0;
     let getQuestions = [];
-    let currentQuestion;
+    let currentQuestion = {};
+    
 
 startBtn.addEventListener("click", startQuiz)
 function startQuiz(){
     nextBtn.classList.add("hide");
     intro.classList.add("hide");
     quizApp.classList.remove("hide");
-    getQuestions = [...questions]; 
+    getQuestions = [...questions];
+    // shuffleQues = getQuestions.sort(()=> Math.random())
     setNextQuestion();
     countDownTime();
     nextButton();
@@ -24,6 +26,8 @@ function startQuiz(){
 let setNextQuestion = () => {
     progress++;
     questionIndex = Math.floor(Math.random() * getQuestions.length);
+    // questionIndex++;
+    console.log(questionIndex);
     currentQuestion = getQuestions[questionIndex];
     questionElement.innerText = currentQuestion.question;
     //options
@@ -42,14 +46,16 @@ options.forEach(choice =>{
             score++;
             selectedChoice.parentElement.classList.add("correct");
             nextBtn.classList.remove("hide");
+            // setNextQuestion();
         }else{
             choice.parentElement.classList.add("wrong");
             nextBtn.classList.remove("hide");
+            // setNextQuestion();
         }
     })
 })
 
-let  displayProgress = ques => {
+function displayProgress(ques) {
     let progress = document.getElementById("ques");
     let progressDisplay = `Question ${ques} of ${questions.length}`;
     progress.innerHTML = progressDisplay;
@@ -57,13 +63,41 @@ let  displayProgress = ques => {
 
 let nextButton = () =>{
     nextBtn.addEventListener('click', ()=>{
-        if (getQuestions > questionIndex + 1) {
-            console.log("ok");
+        if (progress == 10) {
+        //    getQuestions.length === 0
+        let submit;
+        nextBtn.innerText = "Submit";
+        nextBtn.style.backgroundColor = "orangeRed"
+       submit = nextBtn;
+        submit.addEventListener('click', ()=>{showScores()})
         }else{
+            questionIndex++;
             setNextQuestion();
         }
 
     })
+}
+
+function showScores(){
+    let got = document.getElementById("above-average");
+    if (score >= 5) {
+        let average = "You scored 'ABOVE' average, keep up the Good works";
+        got = average;
+    }else{
+        let Notaverage= " You scored 'BELOW' average, better luck next time";
+        got = Notaverage;
+    }
+    quizApp.classList.add("hide");
+    let scoreBody= document.createElement("div");
+    scoreBody.innerHTML = `
+        <div class="start">
+            <div class="score">
+                <h1 id="score-display">YOUR SCORE ON THIS COURSE IS <span id ="score">${score}</span> OUT OF <span id="score">${questions.length}</span></h1>
+                <h2 id="average">${got}</h2>;
+                <button class="start-btn"><a id="take-again" href="index.html">Take Quiz Again</a></button>
+            </div>
+        </div>`;
+        body.appendChild(scoreBody);
 }
 
 //countdown timer
@@ -176,5 +210,6 @@ const questions = [
         choice3: "C. innerHTML is the parent of innerText",
         choice4: `D. innerHTML process an HTML element if found in string while innerText does not process an HTML`,
         answer: 4
-    }
+    },
+    
 ]

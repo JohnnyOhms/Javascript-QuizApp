@@ -209,6 +209,10 @@ header{
     color: var(--color-primary);
 }
 
+#score{
+    color: var(--color-primary);
+}
+
 #take-again{
     text-decoration: none;
     color: var(--white);
