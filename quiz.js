@@ -6,9 +6,23 @@ const startBtn = document.querySelector(".start-btn"),
     btn_containers = document.querySelector(".buttons");
     let options = Array.from(document.getElementsByClassName('txt'));
     let nextBtn = document.querySelector(".next");
+    let colorOption = Array.from(document.getElementsByClassName('btn'));
     let questionIndex, progress = 0, score = 0;
     let getQuestions = [];
     let currentQuestion = {};
+    console.log(colorOption);
+
+let resetCorrect = ()=>{
+   colorOption.map(reset =>{
+        return reset.classList.remove('correct');
+   })
+}
+
+let resetWrong = ()=>{
+    colorOption.map(reset =>{
+        return reset.classList.remove("wrong");
+    })
+}
     
 
 startBtn.addEventListener("click", startQuiz)
@@ -17,7 +31,6 @@ function startQuiz(){
     intro.classList.add("hide");
     quizApp.classList.remove("hide");
     getQuestions = [...questions];
-    // shuffleQues = getQuestions.sort(()=> Math.random())
     setNextQuestion();
     countDownTime();
     nextButton();
@@ -25,9 +38,9 @@ function startQuiz(){
 
 let setNextQuestion = () => {
     progress++;
+    resetCorrect();
+    resetWrong();
     questionIndex = Math.floor(Math.random() * getQuestions.length);
-    // questionIndex++;
-    console.log(questionIndex);
     currentQuestion = getQuestions[questionIndex];
     questionElement.innerText = currentQuestion.question;
     //options
@@ -36,6 +49,7 @@ let setNextQuestion = () => {
         choice.innerText = currentQuestion['choice' + num];
     })
     getQuestions.splice(questionIndex, 1)
+    nextBtn.classList.add('hide');
     displayProgress(progress);
 }
 options.forEach(choice =>{
@@ -46,11 +60,9 @@ options.forEach(choice =>{
             score++;
             selectedChoice.parentElement.classList.add("correct");
             nextBtn.classList.remove("hide");
-            // setNextQuestion();
         }else{
             choice.parentElement.classList.add("wrong");
             nextBtn.classList.remove("hide");
-            // setNextQuestion();
         }
     })
 })
@@ -68,7 +80,7 @@ let nextButton = () =>{
         let submit;
         nextBtn.innerText = "Submit";
         nextBtn.style.backgroundColor = "orangeRed"
-       submit = nextBtn;
+        submit = nextBtn;
         submit.addEventListener('click', ()=>{showScores()})
         }else{
             questionIndex++;
@@ -92,7 +104,7 @@ function showScores(){
     scoreBody.innerHTML = `
         <div class="start">
             <div class="score">
-                <h1 id="score-display">YOUR SCORE ON THIS COURSE IS <span id ="score">${score}</span> OUT OF <span id="score">${questions.length}</span></h1>
+                <h1 id="score-display">YOUR SCORED ON THIS QUIZ IS <span id ="score">${score}</span> OUT OF <span id="score">${questions.length}</span></h1>
                 <h2 id="average">${got}</h2>;
                 <button class="start-btn"><a id="take-again" href="index.html">Take Quiz Again</a></button>
             </div>
@@ -117,7 +129,7 @@ let countDownTime = function countDown(){
             seconds = seconds < 10 ? "0" + seconds : seconds;
             let timerElement = document.getElementById("timer");
             timerElement.innerHTML = `00:${minute}:${seconds}`;
-            let timeOut = minute <= 0 ? timerElement.style.border = "solid red":timerElement;
+            let timeOut = minute <= 0 ? timerElement.style.border = "solid red": timerElement.style.border="solid green";
             time--;
         }
     },1000)

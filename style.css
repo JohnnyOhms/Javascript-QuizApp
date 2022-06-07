@@ -105,13 +105,9 @@ header{
 }
 
 .btn:hover{
-    background-color: var(--light-blue);
-    color: var(--white);
+    padding: 1.5rem;
+    color: var(--color-dark-grey);
     cursor: pointer;
-}
-.btn:focus{
-    background-color: var(--color-sec);
-    color: var(--white);
 }
 
 .txt{
@@ -216,4 +212,16 @@ header{
 #take-again{
     text-decoration: none;
     color: var(--white);
+}
+
+.correct{
+    background-color: green;
+}
+
+.wrong{
+    background-color: #9d0919;
+}
+
+.inherit{
+    background-color:inherit ;
 }
