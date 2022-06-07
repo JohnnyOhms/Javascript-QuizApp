@@ -10,7 +10,6 @@ const startBtn = document.querySelector(".start-btn"),
     let questionIndex, progress = 0, score = 0;
     let getQuestions = [];
     let currentQuestion = {};
-    console.log(colorOption);
 
 let resetCorrect = ()=>{
    colorOption.map(reset =>{
