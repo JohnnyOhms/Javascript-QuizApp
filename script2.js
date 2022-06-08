@@ -1,3 +1,5 @@
+//test javscript file
+
 const startBtn = document.querySelector(".start-btn");
     intro = document.querySelector(".start"),
     quizApp = document.querySelector(".container"),

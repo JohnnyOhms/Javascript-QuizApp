@@ -23,7 +23,6 @@ let resetWrong = ()=>{
     })
 }
     
-
 startBtn.addEventListener("click", startQuiz)
 function startQuiz(){
     nextBtn.classList.add("hide");
