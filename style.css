@@ -25,11 +25,54 @@ html {
 body{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     background-image: url(./image/taylor-van-riper-yQorCngxzwI-unsplash.jpg);
-    /* height: 100%; */
     background-position: center;
-    background-repeat: no-repeat;
     background-size: cover;
+    display: flex;
+    flex-direction: column;
 
+}
+
+.start-quiz{
+    margin: 20rem auto;
+    background-color: var(--light-blue);
+    color: var(--white);
+    padding: 2rem;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    border-radius: 7px;
+    box-shadow: 1px 3px 2px 7px rgba(9, 9, 27, 0.87);
+}
+
+.start-quiz:active{
+    background-color: var(--color-sec);
+}
+
+#logo{
+    height: 16rem;
+    width: 16rem;
+    margin: 0 auto;
+}
+
+.inst-head{
+    font-weight: 600;
+    font-size: 25px;
+}
+
+.instructions{
+    background-color: var(--white);
+    margin: 10PX auto;
+    padding: 2rem;
+}
+
+ol{
+    padding: 2rem;
+}
+
+ol li{
+    padding: 0.8rem 1rem;
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .container {
@@ -169,13 +212,6 @@ header{
     padding: 0.8rem;
     font-size: 20px;
     font-family: 'Times New Roman', Times, serif;
-}
-
-#logo{
-    height: 16rem;
-    width: 16rem;
-    margin: 10px auto;
-    
 }
 
 .start-btn{

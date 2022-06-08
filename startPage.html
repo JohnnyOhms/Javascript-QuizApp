@@ -1,12 +1,43 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/2dfc8161ff.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
     <title>Start page</title>
 </head>
 <body>
-    
+    <button class="start-quiz">
+        START
+    </button>
+    <img src="./image/images.png" alt="img" id="logo">
+    <div class="instructions">
+        <h1 class="inst-head">INSTRUCTIONS<i class="fa-solid fa-triangle-person-digging"></i></h1>
+        <hr>
+        <ol>
+            <li>
+                You only have 2 minutes to answer 10 JavaScript Based Questions
+            </li>
+            <li>
+                Timeout means your Quiz will be authomatically submitted
+            </li>
+            <li>
+                Note that you are allowed to choose only one option per questions. if gotten correctly it appears green
+            </li>
+            <li>
+                Choosing of options more than once per Question might crash the code
+            </li>
+            <li>
+                At the end of the Quiz, your total score will be Displayed
+            </li>
+        </ol>
+        <div class="start-btns">
+            <button class="quit">Quit</button>
+            <button class="quit">Start-Quiz</button>
+        </div>
+    </div>
+    <script type="module" src="quiz.js"></script>
 </body>
 </html>
