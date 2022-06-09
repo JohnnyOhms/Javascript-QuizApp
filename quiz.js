@@ -36,11 +36,21 @@ function loadInstructions(){
     logo.classList.remove("hide");  
 }
 
-start.addEventListener("click", startQuiz)
+quit.addEventListener("click", ()=>{
+    instruction.classList.add('hide');
+    logo.classList.add("hide");
+    startBtn.classList.remove('hide');
+})
+
+
+begin.addEventListener("click", startQuiz)
 function startQuiz(){
-    nextBtn.classList.add("hide");
-    intro.classList.add("hide");
+    // nextBtn.classList.add("hide");
+    // intro.classList.add("hide");
     quizApp.classList.remove("hide");
+    instruction.classList.add("hide");
+    nextBtn.classList.add("hide");
+    logo.classList.add('hide');
     getQuestions = [...questions];
     setNextQuestion();
     countDownTime();

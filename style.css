@@ -22,6 +22,11 @@ html {
     font-size: 10px;
 }
 
+.quiz-main{
+    display: flex;
+    flex-direction: column;
+}
+
 body{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     background-image: url(./image/taylor-van-riper-yQorCngxzwI-unsplash.jpg);
