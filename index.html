@@ -10,15 +10,46 @@
 </head>
 <body>
     <header>QuizApp</header>
-    <main class="quiz-main">
-        <!-- <div class="start">
+    <!-- <main class="quiz-main">
+        <div class="start">
             <div class="start-display">
                 <h1 id="start-note">JAVASCRIPT QUIZ, TEST YOUR KNOWLEDGE ON THIS COURSE</h1>
                 <img src="./image/images.png" alt="img" id="logo">
                 <button class="start-btn">Start Quiz</button>
             </div>
         </div> -->
-        <div class="container">
+
+        <button class="start-quiz">
+            START
+        </button>
+        <img src="./image/images.png" alt="img" id="logo" class="hide">
+        <div class="instructions hide">
+            <h1 class="inst-head">INSTRUCTIONS<i class="fa-solid fa-triangle-person-digging"></i></h1>
+            <hr>
+            <ol>
+                <li>
+                    You have only 2 minutes to answer 10 JavaScript Based Questions.
+                </li>
+                <li>
+                    Timeout means your Quiz will be authomatically submitted.
+                </li>
+                <li>
+                    Note that you are allowed to choose only one option per questions. if gotten correctly it appears green.
+                </li>
+                <li>
+                    Choosing of options more than once per Question might crash the code.
+                </li>
+                <li>
+                    At the end of the Quiz, your total score will be Displayed.
+                </li>
+            </ol>
+            <hr>
+            <div class="start-btns">
+                <button class="quit">Quit</button>
+                <button class="begin">Start-Quiz</button>
+            </div>
+        </div>
+        <div class="container hide">
             <div class="quiz-app">
                 <div class="head-content">
                     <span id="ques">Question X of Y</span>
@@ -50,6 +81,6 @@
 
         </div>
     </main>
-    <script type="module" src="quiz.js"></script>
+    <script src="quiz.js"></script>
 </body>
 </html>

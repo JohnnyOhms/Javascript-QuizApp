@@ -1,17 +1,21 @@
-const startBtn = document.querySelector(".start-quiz"),
+const startBtn = document.querySelector(".start-quiz"), 
+    start = document.querySelector('.start-btn')
     body = document.querySelector(".quiz-main"),
     intro = document.querySelector(".start"),
     quizApp = document.querySelector(".container"),
     questionElement = document.querySelector(".ques-content"),
     instruction = document.querySelector(".instructions"),
     btn_containers = document.querySelector(".buttons");
-    let options = Array.from(document.getElementsByClassName('txt'));
-    let nextBtn = document.querySelector(".next");
-    let colorOption = Array.from(document.getElementsByClassName('btn'));
-    let questionIndex, progress = 0, score = 0;
-    let getQuestions = [];
-    let currentQuestion = {};
-    let logo = document.getElementById("logo");
+let options = Array.from(document.getElementsByClassName('txt')),
+    nextBtn = document.querySelector(".next"),
+    colorOption = Array.from(document.getElementsByClassName('btn')),
+    questionIndex, progress = 0, score = 0,
+    getQuestions = [],
+    currentQuestion = {},
+    logo = document.getElementById("logo"),
+    quit = document.querySelector('.quit'),
+    begin = document.querySelector('.begin');
+    console.log('index');
 
 let resetCorrect = ()=>{
    colorOption.map(reset =>{
@@ -25,15 +29,22 @@ let resetWrong = ()=>{
     })
 }
     
-startBtn.addEventListener("click", startQuiz)
-function startQuiz(){
+startBtn.addEventListener("click", loadInstructions)
+function loadInstructions(){
     instruction.classList.remove("hide");
     startBtn.classList.add("hide");
-    logo.classList.remove("hide");
-    // getQuestions = [...questions];
-    // setNextQuestion();
-    // countDownTime();
-    // nextButton();
+    logo.classList.remove("hide");  
+}
+
+start.addEventListener("click", startQuiz)
+function startQuiz(){
+    nextBtn.classList.add("hide");
+    intro.classList.add("hide");
+    quizApp.classList.remove("hide");
+    getQuestions = [...questions];
+    setNextQuestion();
+    countDownTime();
+    nextButton();
 }
 
 let setNextQuestion = () => {
@@ -135,9 +146,6 @@ let countDownTime = function countDown(){
     },1000)
 }
 
-
-
-
 const questions = [
     {
         question : "Q. what is event Bubbling?",
@@ -225,3 +233,6 @@ const questions = [
     },
     
 ]
+
+
+
