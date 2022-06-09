@@ -1,8 +1,9 @@
-const startBtn = document.querySelector(".start-btn"),
+const startBtn = document.querySelector(".start-quiz"),
     body = document.querySelector(".quiz-main"),
     intro = document.querySelector(".start"),
     quizApp = document.querySelector(".container"),
     questionElement = document.querySelector(".ques-content"),
+    instruction = document.querySelector(".instructions"),
     btn_containers = document.querySelector(".buttons");
     let options = Array.from(document.getElementsByClassName('txt'));
     let nextBtn = document.querySelector(".next");
@@ -10,6 +11,7 @@ const startBtn = document.querySelector(".start-btn"),
     let questionIndex, progress = 0, score = 0;
     let getQuestions = [];
     let currentQuestion = {};
+    let logo = document.getElementById("logo");
 
 let resetCorrect = ()=>{
    colorOption.map(reset =>{
@@ -25,13 +27,13 @@ let resetWrong = ()=>{
     
 startBtn.addEventListener("click", startQuiz)
 function startQuiz(){
-    nextBtn.classList.add("hide");
-    intro.classList.add("hide");
-    quizApp.classList.remove("hide");
-    getQuestions = [...questions];
-    setNextQuestion();
-    countDownTime();
-    nextButton();
+    instruction.classList.remove("hide");
+    startBtn.classList.add("hide");
+    logo.classList.remove("hide");
+    // getQuestions = [...questions];
+    // setNextQuestion();
+    // countDownTime();
+    // nextButton();
 }
 
 let setNextQuestion = () => {
