@@ -13,8 +13,7 @@ let options = Array.from(document.getElementsByClassName('txt')),
     logo = document.getElementById("logo"),
     quit = document.querySelector('.quit'),
     begin = document.querySelector('.begin');
-    console.log('index');
-
+ 
 let resetCorrect = ()=>{
    colorOption.map(reset =>{
         return reset.classList.remove('correct');
@@ -236,7 +235,6 @@ const questions = [
         choice4: `D. innerHTML process an HTML element if found in string while innerText does not process an HTML`,
         answer: 4
     },
-    
 ]
 
 
