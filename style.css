@@ -304,6 +304,7 @@ header{
     .instructions{
        width: 350px;
        border-radius: 5px;
+       padding: 1rem 1rem 0rem 1rem;
     }
     #log0{
         width: 14px;
@@ -311,6 +312,17 @@ header{
     }
     .quiz-app{
         background-color: var(--white);
+    }
+    .start-btns{
+        padding: 0rem;
+    }
+    ol{
+        padding: 1.3rem;
+    }
+    ol li{
+        padding: 0.8rem 1rem;
+        font-size: 16px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     }
     
 }
