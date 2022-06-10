@@ -70,6 +70,27 @@ body{
     padding: 2rem;
     display: flex;
     flex-direction: column;
+    animation: slide ease .8s;
+}
+
+@keyframes slide {
+    from{
+        transform: translateY(-30rem);
+    }
+    to{
+        transform:translateY(0);
+    }
+}
+.slide-up{
+    animation: slide-up ease .8s;
+}
+
+@keyframes slide-up{
+    0%{
+        transform:translateY(0)
+    }100%{
+        transform: translateY(-90rem);
+    }
 }
 
 ol{
@@ -123,6 +144,15 @@ ol li{
     max-width: 900px;
     margin: 0 auto;
     padding: 0 20px;
+    animation: slide ease .8s;
+}
+
+@keyframes slide {
+    0%{
+        transform: translateY(-30rem);
+    }100%{
+        transform: translateY(0)
+    }
 }
 
 header{

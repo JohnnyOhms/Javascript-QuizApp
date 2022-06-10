@@ -34,22 +34,33 @@ function loadInstructions(){
 }
 
 quit.addEventListener("click", ()=>{
-    instruction.classList.add('hide');
-    logo.classList.add("hide");
-    startBtn.classList.remove('hide');
+    logo.classList.add("slide-up");
+    instruction.classList.add('slide-up');
+    setTimeout(()=>{
+        instruction.classList.add('hide');
+        logo.classList.add("hide");
+        startBtn.classList.remove('hide');
+        instruction.classList.remove('slide-up');
+        logo.classList.remove("slide-up");
+    },500)
 })
 
 
 begin.addEventListener("click", startQuiz)
 function startQuiz(){
-    quizApp.classList.remove("hide");
-    instruction.classList.add("hide");
-    nextBtn.classList.add("hide");
-    logo.classList.add('hide');
-    getQuestions = [...questions];
-    setNextQuestion();
-    countDownTime();
-    nextButton();
+    logo.classList.add('slide-up');
+    instruction.classList.add('slide-up');
+    setTimeout(()=>{
+        quizApp.classList.remove("hide");
+        instruction.classList.add("hide");
+        nextBtn.classList.add("hide");
+        logo.classList.add('hide');
+        getQuestions = [...questions];
+        setNextQuestion();
+        countDownTime();
+        nextButton();
+
+    },500)
 }
 
 let setNextQuestion = () => {
