@@ -187,22 +187,23 @@ header{
     font-size: 1.8rem;
     color: var(--black);
     border: 0.1px solid var(--grey);
-    padding: 10px;
+    margin: 2px 0;
     transition: all .1s;
 }
 
 .btn:hover{
-    /* padding: 1.5rem; */
     border: 2px solid var(--black);
     color: var(--color-dark-grey);
     cursor: pointer;
 }
 
 .txt{
+    /* background-color: #9d0919; */
     font-size: 1.8rem;
     font-weight: 600;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     width: 100%;
+    padding: 1rem;
 }
 
 .next-prev{
@@ -253,7 +254,6 @@ header{
 }
 
 #take-again{
-    background-color: #9d0919;
     padding: 1.3rem;
     width: 100%;
 }

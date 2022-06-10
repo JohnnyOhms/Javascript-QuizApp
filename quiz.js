@@ -135,7 +135,7 @@ let countDownTime = function countDown(){
     let countdown = setInterval(()=>{
         if (time <= 0) {
             clearInterval(countdown);
-            // startBtn.classList.add("hide");
+            startBtn.classList.add("hide");
             showScores();
             return;
         } else {
