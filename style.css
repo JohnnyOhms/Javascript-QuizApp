@@ -188,11 +188,12 @@ header{
     color: var(--black);
     border: 0.1px solid var(--grey);
     padding: 10px;
-    transition: all .3s;
+    transition: all .1s;
 }
 
 .btn:hover{
-    padding: 1.5rem;
+    /* padding: 1.5rem; */
+    border: 2px solid var(--black);
     color: var(--color-dark-grey);
     cursor: pointer;
 }
@@ -206,30 +207,25 @@ header{
 
 .next-prev{
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     padding: 0.5rem;
 }
-.next, .prev{
+.next{
     background-color: var(--light-blue);
     color: var(--white);
-    padding: 0.8rem;
+    padding: 1.3rem;
     position: relative;
     margin: 1rem 2px;
     border: none;
-    font-size: 15px;
+    font-size: 18px;
     cursor: pointer;
-    border-radius: 3px;
-}
-
-.prev:active{
-    background-color: var(--color-sec);
+    border-radius: 5px;
+    float: right;
 }
 
 .next:active{
     background-color: var(--color-sec);
 }
-
-/* START AND END PAGE*/
 
 .hide {
     display: none;
@@ -239,23 +235,6 @@ header{
     max-width: 900px;
     margin: auto;
     padding: 0 20px;
-}
-
-.start-display, .score{
-    background-color: var(--grey);
-    border:1px solid var(--black);
-    padding:0.5rem;
-    margin: auto;
-    height: 300px;
-    display: flex;
-    flex-direction: column;
-}
-
-#start-note{
-    text-align: center;
-    padding: 0.8rem;
-    font-size: 20px;
-    font-family: 'Times New Roman', Times, serif;
 }
 
 .start-btn{
@@ -269,8 +248,24 @@ header{
     margin: 0.2px auto 0px auto;
 }
 
-.start-btn:active{
+.strt-btn:active{
     background-color: var(--color-sec);
+}
+
+#take-again{
+    background-color: #9d0919;
+    padding: 1.3rem;
+    width: 100%;
+}
+
+.score{
+    background-color: var(--grey);
+    border:1px solid var(--black);
+    padding:0.5rem;
+    margin: auto;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
 }
 
 #score-display, #average{

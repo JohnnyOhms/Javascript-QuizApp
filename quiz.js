@@ -1,7 +1,5 @@
 const startBtn = document.querySelector(".start-quiz"), 
-    start = document.querySelector('.start-btn')
     body = document.querySelector(".quiz-main"),
-    intro = document.querySelector(".start"),
     quizApp = document.querySelector(".container"),
     questionElement = document.querySelector(".ques-content"),
     instruction = document.querySelector(".instructions"),
@@ -45,8 +43,6 @@ quit.addEventListener("click", ()=>{
 
 begin.addEventListener("click", startQuiz)
 function startQuiz(){
-    // nextBtn.classList.add("hide");
-    // intro.classList.add("hide");
     quizApp.classList.remove("hide");
     instruction.classList.add("hide");
     nextBtn.classList.add("hide");
@@ -107,7 +103,6 @@ let nextButton = () =>{
             questionIndex++;
             setNextQuestion();
         }
-
     })
 }
 
@@ -134,13 +129,13 @@ function showScores(){
 }
 
 //countdown timer
-let countTime = 2;
+let countTime = 1;
 let time = countTime * 60;
 let countDownTime = function countDown(){
     let countdown = setInterval(()=>{
         if (time <= 0) {
             clearInterval(countdown);
-            intro.classList.add("hide");
+            // startBtn.classList.add("hide");
             showScores();
             return;
         } else {
