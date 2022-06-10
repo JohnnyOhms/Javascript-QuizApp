@@ -301,6 +301,13 @@ header{
 }
 
 @media (max-width:600px) {
+    .quiz-main{
+        background-image: url(./image/taylor-van-riper-yQorCngxzwI-unsplash-small-size.jpg);
+        height: 100hv;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
     .instructions{
        width: 350px;
        border-radius: 5px;
