@@ -299,3 +299,18 @@ header{
 .inherit{
     background-color:inherit ;
 }
+
+@media (max-width:600px) {
+    .instructions{
+       width: 350px;
+       border-radius: 5px;
+    }
+    #log0{
+        width: 14px;
+        height: 14px;
+    }
+    .quiz-app{
+        background-color: var(--white);
+    }
+    
+}

@@ -119,7 +119,7 @@ function showScores(){
     scoreBody.innerHTML = `
         <div class="start">
             <div class="score">
-                <h1 id="score-display">YOUR SCORED ON THIS QUIZ IS <span id ="score">${score}</span> OUT OF <span id="score">${questions.length}</span></h1>
+                <h1 id="score-display">YOUR SCORE ON THIS QUIZ IS <span id ="score">${score}</span> OUT OF <span id="score">${questions.length}</span></h1>
                 <h2 id="average">${got}</h2>;
                 <button class="start-btn"><a id="take-again" href="index.html">Take Quiz Again</a></button>
             </div>
@@ -128,7 +128,7 @@ function showScores(){
 }
 
 //countdown timer
-let countTime = 1;
+let countTime = 2;
 let time = countTime * 60;
 let countDownTime = function countDown(){
     let countdown = setInterval(()=>{
