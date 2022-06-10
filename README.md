@@ -8,7 +8,7 @@ main files to get the code are:
 -----------------------------------------------------
 #quiz.js
 ----------------------------------------------------------
-#style.css.
+#style.css
 ---------------------------------------------------------------
 every other files are work sheet to make the main files.
 link below to view in web browsers.
