@@ -154,7 +154,7 @@ function showScores(){
 }
 
 //countdown timer
-let countTime = 0.1;
+let countTime = 2;
 let time = countTime * 60;
 let countDownTime = function countDown(){
     let countdown = setInterval(()=>{
