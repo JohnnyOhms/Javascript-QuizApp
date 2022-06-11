@@ -73,14 +73,8 @@ body{
     animation: slide ease .8s;
 }
 
-@keyframes slide {
-    from{
-        transform: translateY(-30rem);
-    }
-    to{
-        transform:translateY(0);
-    }
-}
+/* ANIMAIONS */
+
 .slide-up{
     animation: slide-up ease .8s;
 }
@@ -92,6 +86,55 @@ body{
         transform: translateY(-90rem);
     }
 }
+
+.slide-right{
+    animation: slide-right ease .8s;
+}
+
+@keyframes slide-right{
+    from{
+        transform:translateX(0)
+    }to{
+        transform:translateX(90rem)
+    }
+}
+
+.slide-down{
+    animation: slide-down ease .8s;
+}
+
+@keyframes slide-down {
+    from{
+        transform: translateY(-40rem);
+    }to{
+        transform: translateY(0);
+    }
+}
+
+.slide-left{
+    animation: slide-left ease .8s;
+}
+
+@keyframes slide-left{
+    from{
+        transform:translateX(0)
+    }to{
+        transform:translateX(-90rem)
+    }
+}
+
+.slide-from-left{
+    animation: slide-from-left ease .8s;
+}
+
+@keyframes slide-from-left{
+    0%{
+        transform:translateX(-90rem)
+    }100%{
+        transform: translateX(0);
+    }
+}
+/* END */
 
 ol{
     padding: 2rem;
@@ -144,7 +187,7 @@ ol li{
     max-width: 900px;
     margin: 0 auto;
     padding: 0 20px;
-    animation: slide ease .8s;
+    /* animation: slide ease .8s; */
 }
 
 @keyframes slide {

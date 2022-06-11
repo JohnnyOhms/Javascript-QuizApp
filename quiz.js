@@ -48,9 +48,10 @@ quit.addEventListener("click", ()=>{
 
 begin.addEventListener("click", startQuiz)
 function startQuiz(){
-    logo.classList.add('slide-up');
-    instruction.classList.add('slide-up');
+    logo.classList.add('slide-right');
+    instruction.classList.add('slide-left');
     setTimeout(()=>{
+        quizApp.classList.add('slide-down')
         quizApp.classList.remove("hide");
         instruction.classList.add("hide");
         nextBtn.classList.add("hide");
@@ -108,10 +109,24 @@ let nextButton = () =>{
         nextBtn.innerText = "Submit";
         nextBtn.style.backgroundColor = "orangeRed"
         submit = nextBtn;
-        submit.addEventListener('click', ()=>{showScores()})
+        submit.addEventListener('click', ()=>{
+            quizApp.classList.remove("slide-down");
+            quizApp.classList.add("slide-right");
+            setTimeout(()=>{
+                return showScores();
+            },700)
+        })
+        quizApp.classList.remove("slide-from-left");
         }else{
-            questionIndex++;
-            setNextQuestion();
+            quizApp.classList.remove("slide-down");
+            quizApp.classList.add("slide-right");
+            setTimeout(()=>{
+                quizApp.classList.remove("slide-right");
+                quizApp.classList.add("slide-from-left");
+                questionIndex++;
+                setNextQuestion();
+            },700)
+            quizApp.classList.remove("slide-from-left");
         }
     })
 }
@@ -139,15 +154,17 @@ function showScores(){
 }
 
 //countdown timer
-let countTime = 2;
+let countTime = 0.1;
 let time = countTime * 60;
 let countDownTime = function countDown(){
     let countdown = setInterval(()=>{
         if (time <= 0) {
             clearInterval(countdown);
-            startBtn.classList.add("hide");
-            showScores();
-            return;
+            quizApp.classList.add('slide-right');
+            setTimeout(()=>{
+                startBtn.classList.add("hide");
+                showScores();
+            },1000)
         } else {
             let minute = Math.floor(time / 60);
             let seconds = time % 60;
