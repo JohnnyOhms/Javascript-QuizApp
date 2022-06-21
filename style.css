@@ -278,6 +278,7 @@ header{
     padding: 1rem;
 }
 
+
 .next-prev{
     display: flex;
     justify-content: flex-end;
@@ -375,11 +376,11 @@ header{
 
 @media (max-width:600px) {
     .quiz-main{
-        background-image: url(./image/taylor-van-riper-yQorCngxzwI-unsplash-small-size.jpg);
+        background-image: url(./image/taylor-van-riper-yQorCngxzwI-unsplash-small-size.jpg) center center fixed no-repeat;
         height: 100hv;
-        background-position: center;
+        /* background-position: center; */
         background-size: cover;
-        background-repeat: no-repeat;
+        /* background-repeat: no-repeat; */
     }
     .instructions{
        width: 350px;
