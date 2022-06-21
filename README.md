@@ -1,5 +1,5 @@
 # Javascript-QuizApp
-This is a mini quiz app if ajvascript Based questions, Build by JohnnyOhms..
+This is a mini animated quiz app with Javascript Based questions, Build by JohnnyOhms.
 it has few fetures programmed with Javascript.
 --------------------------------------------------------
 main files to get the code are:
@@ -10,7 +10,7 @@ main files to get the code are:
 ----------------------------------------------------------
 #style.css
 ---------------------------------------------------------------
-every other files are work sheet to make the main files.
-link below to view in web browsers.
-------------------------------------------------------------
-
+every other files are work sheets to make the project file.
+link to view in web browsers.
+https://la-quizapp.netlify.app/
+-----------------------------------------------
