@@ -374,13 +374,11 @@ header{
     background-color:inherit ;
 }
 
-@media (max-width:600px) {
-    .quiz-main{
+@media screen and (max-width:600px) {
+    .body{
         background-image: url(./image/taylor-van-riper-yQorCngxzwI-unsplash-small-size.jpg) center center fixed no-repeat;
         height: 100hv;
-        /* background-position: center; */
         background-size: cover;
-        /* background-repeat: no-repeat; */
     }
     .instructions{
        width: 350px;
